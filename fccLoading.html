@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			*{
+				background-color: #f5f6f7;
+			}
+			
+			.box{
+				position:relative;
+				display:inline-block;
+				top:50vh;
+				left:50vw;
+				width:90px;
+				height:100px;
+				background-color:transparent;
+				transform: translate(-55px, -50px) scale(0.7);
+			}
+
+			.bar{
+				position:absolute;
+				display:inline-block;
+				height:100px;
+				width:10px;
+				border-radius: 5px;
+				background-color:#000;
+				animation-iteration-count: infinite;
+				animation-duration: 0.75s;
+			}
+
+			.bar1{
+				animation-name: beat1;
+			}
+
+			.bar2{
+				
+				left:20px;
+				animation-name: beat1;
+				animation-delay: 0.5625s;
+			}
+
+			.bar3{
+				left:40px;
+				animation-name: beat2;
+			}
+
+			.bar4{
+				left:60px;
+				animation-name: beat1;
+				animation-delay: 0.5625s;
+			}
+
+			.bar5{
+				left: 80px;
+				animation-name: beat1;
+			}
+
+			@keyframes beat1{
+				0%{
+					transform:scaleY(1);
+				}
+				50%{
+					transform: scaleY(0.5);
+				}
+				100%{
+					transform: scaleY(1);
+				}
+			}
+
+			@keyframes beat2{
+				0%{
+					transform:scaleY(0.5);
+				}
+				50%{
+					transform: scaleY(1);
+				}
+				100%{
+					transform: scaleY(0.5);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="bar1 bar"></div>
+			<div class="bar2 bar"></div>
+			<div class="bar3 bar"></div>
+			<div class="bar4 bar"></div>
+			<div class="bar5 bar"></div>
+		</div>
+	</body>
+</html>
